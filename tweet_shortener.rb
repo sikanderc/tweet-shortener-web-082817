@@ -13,6 +13,18 @@ def word_substituter(string_of_tweet)
   end
   string_of_tweet
 end
+=begin
+Or:
+def word_substituter(tweet)
+  tweet.split.collect do |word|
+    if dictionary.keys.include?(word.downcase)
+      word = dictionary[word.downcase]
+    else
+      word
+    end
+  end.join(" ")
+end  
+=end
 
 def bulk_tweet_shortener(tweets)
   tweets.each do |tweet|
